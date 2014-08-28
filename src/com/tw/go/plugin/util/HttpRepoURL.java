@@ -91,7 +91,7 @@ public class HttpRepoURL extends RepoUrl {
                 sb.append("?").append(urlObj.getQuery());
             if(urlObj.getRef() != null)
                 sb.append("#").append(urlObj.getRef());
-            if(urlObj.getQuery() == null && urlObj.getRef() == null && !urlObj.getPath().endsWith("/"))
+            if(urlObj.getQuery() == null && urlObj.getRef() == null && urlObj.getPath().isEmpty())
                 sb.append("/");
             return sb.toString();
         } catch (Exception e) {

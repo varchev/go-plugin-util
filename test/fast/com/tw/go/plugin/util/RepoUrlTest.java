@@ -84,7 +84,7 @@ public class RepoUrlTest {
     public void shouldReturnUrlAsIsIfNoCredentialsProvided() throws Exception {
         String url = "http://repohost/some/path";
         HttpRepoURL repoUrl = (HttpRepoURL) RepoUrl.create(url, null, null);
-        assertThat(repoUrl.getUrlWithBasicAuth(), is(url+"/"));
+        assertThat(repoUrl.getUrlWithBasicAuth(), is(url));
     }
     @Test
     public void shouldHandleQuery() throws Exception {
